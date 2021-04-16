@@ -1,5 +1,6 @@
 package application;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
 
@@ -29,6 +30,11 @@ public class Program {
 		System.out.println("\n- TEST 03: seller findAll -");
 		list = sellerDao.findAll();
 		list.forEach(System.out::println);
+		
+		System.out.println("\n- TEST 04: seller insert -");
+		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", LocalDate.now(), 2400.0, dep);
+		sellerDao.insert(newSeller);
+		System.out.println("Inserted! New id = " + newSeller.getId());
 		
 	}
 
