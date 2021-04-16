@@ -19,7 +19,6 @@ public class Program {
 		
 		System.out.println("- TEST 01: seller findById -");
 		Seller seller = sellerDao.findById(3);
-		
 		System.out.println(seller);
 		
 		System.out.println("\n- TEST 02: seller findByDepartment -");
